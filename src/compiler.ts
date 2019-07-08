@@ -97,6 +97,7 @@ export function getPrettierOptions(filePath: string, source: string, options: pr
     const quotations = getQuotation(source);
 
     _.defaults(Object.assign({}, options), {
+      	parser: 'babel',
         tabWidth: indentAmount,
         useTabs: indentType && indentType === 'tab',
         printWidth: sourceWidth,
